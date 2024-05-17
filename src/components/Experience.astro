@@ -1,0 +1,40 @@
+---
+import type { Code, Debug } from "astro:components"
+import ExperienceItem from "./ExperienceItem.astro"
+import type { Image } from "astro:assets"
+
+const EXPERIENCE = [
+      {
+            date:"2022 - Present",
+            title:"Full-Stack Web Developer",
+            place:"Rodas Computación",
+            description:`Developing state platform for regulatory improvement for the state of Veracruz, 
+            which consists of three web portals: 1. Procedures and Services Portal, 2. Procedures Registration Portal, 3. 
+            Citizen Portal.`,
+            link:"https://www.mejoraregulatoriamexico.com.mx/#/"
+      },
+      {
+            
+            date:"2021 - 2022",
+            title:"Android Developer",
+            place:"Gecosoft",
+            description:`Developed a mobile application designed for comprehensive monitoring of chronic-degenerative diseases. 
+            The application focused on enhancing the management of medical treatments and the continuous tracking of users' 
+            vital signs and physical activity through wearable devices.`,
+            link:"https://premytecd.com/"
+      }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+      
+      {
+            EXPERIENCE.map(experience=>(
+                  <li class="mb-10 ms-4">
+                        <ExperienceItem {...experience}/>
+                  </li>
+            ))
+      }
+      
+  </ol>
+  
+  

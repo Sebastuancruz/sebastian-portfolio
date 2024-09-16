@@ -11,14 +11,15 @@ import Work from "../components/icons/Work.astro";
 import Experience from "../components/Experience.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import ColorBadge from "../components/ColorBadge.astro";
 ---
 
 <Layout title="Sebastian Cruz - FullStack developer">
   <main class="px-4">
     <section class="w-full mx-auto lg:w-[740px] pt-20 lg:pt-40">
       <img
-        class="rounded-full w-14 h-14 mb-3"
-        src="src/assets/sebastian.svg"
+        class="rounded-full w-20 h-20 mb-3"
+        src="src/assets/sebastian4.svg"
         alt="sebastian"
       />
 
@@ -47,7 +48,7 @@ import Projects from "../components/Projects.astro";
       </h2>
 
       <nav class="flex gap-2 lg:gap-x-2 my-10 flex-wrap">
-        <Social href="https://www.linkedin.com/in/sebastiancruzarmas/">
+        <Social href="https://github.com/Sebastuancruz">
           <Github class="w-6 h-6" />
           GitHub
         </Social>
@@ -72,12 +73,32 @@ import Projects from "../components/Projects.astro";
       <Experience />
     </section>
 
-    <section id="projects" class="w-full mx-auto lg:w-[740px] pt-20">
+    <section id="stack" class="w-full  mx-auto lg:w-[740px] pt-10 pb-10">
+      <h2 class="text-2xl font-semibold pb-5 flex gap-x-3 items-center">
+        <Code />
+        TechStack
+      </h2>
+      <nav class="gap-3">
+        <ColorBadge backgroudColor="bg-rose-700" textColor="text-white">Java</ColorBadge>
+        <ColorBadge backgroudColor="bg-amber-600" textColor="text-white">JavaScript</ColorBadge>
+        <ColorBadge backgroudColor="bg-blue-700" textColor="text-white">Typescript</ColorBadge>
+        <ColorBadge backgroudColor="bg-red-600" textColor="text-white">Astro</ColorBadge>
+        <ColorBadge backgroudColor="bg-rose-700" textColor="text-white">Angular</ColorBadge>
+        <ColorBadge backgroudColor="bg-blue-500" textColor="text-white">Ionic</ColorBadge>
+        <ColorBadge backgroudColor="bg-rose-900" textColor="text-white">NestJS</ColorBadge>
+        <ColorBadge backgroudColor="bg-green-700" textColor="text-white">SpringBoot</ColorBadge>
+        <ColorBadge backgroudColor="bg-blue-600" textColor="text-white">PostgreSQL</ColorBadge>
+        <ColorBadge backgroudColor="bg-blue-500" textColor="text-white">Docker</ColorBadge>
+        <ColorBadge backgroudColor="bg-gray-900" textColor="text-white">Git + Github</ColorBadge>
+      </nav>
+    </section>
+
+    <section id="projects" class="w-full  mx-auto lg:w-[740px] pt-20 pb-10">
       <h2 class="text-2xl font-semibold pb-5 flex gap-x-3 items-center">
         <Code />
         Projects
       </h2>
-      <nav class="lg:flex flex-wrap">
+      <nav class="grid lg:grid-cols-2 md:grid-cols-2 sm:justify-center gap-4">
         <Projects />
       </nav>
     </section>
